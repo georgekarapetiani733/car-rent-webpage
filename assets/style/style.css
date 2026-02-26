@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css2?family=Michroma&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Preahvihear&display=swap);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-font: Plus Jakarta Sans, sans-serif;
+
+    --primary-color: #1A202C;
+    --primary-color-500: #3563E9;
+    --secondary-color-300:  #90A3BF;
+    --secondary-color: #FFFFFF;
+    --secondary-color-500: #1A202C;
+    --information-color: #54A6FF;
+    --heart-color: #ED3F3F;
+
+    --primary-font-size: 16px;
+    --secondary-font-size: 14px;
+    --primary-heading-size: 32px;
+    --secondary-heading-size: 20px;
+    
+}
