@@ -76,6 +76,26 @@ a {
     gap: 20px;
     margin-left: auto;
 }
+.cta-wrapper a img {
+    transition: transform 0.3s ease;
+}
+.heart-btn:hover img {
+    transform: scale(1.2);
+    filter: brightness(0) saturate(100%) invert(15%) sepia(81%) saturate(7455%) hue-rotate(358deg) brightness(97%) contrast(113%)
+}
+.setting-btn:hover img { 
+    transform: rotate(90deg);
+}
+.notification-btn:hover img {
+    animation: ring 0.5s ease-in-out;
+}
+@keyframes ring {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
 .cta-wrapper a {
     border-radius: 50%;
     border: 1px solid var(--secondary-color-300);
