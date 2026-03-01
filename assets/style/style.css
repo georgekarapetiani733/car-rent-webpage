@@ -117,3 +117,87 @@ a {
     right: 2px;
     width: 11px;
 }
+.container {
+    max-width: 1312px;
+    margin: 32px auto;
+    padding: 0 20px;
+}
+.hero-banners {
+    display: flex;
+    gap: 32px;
+}
+.rental-banner-light-blue,
+.rental-banner-blue {
+    flex: 1;
+    height: 360px;
+    border-radius: 10px;
+    padding: 24px;
+    position: relative;
+    color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.rental-banner-light-blue {
+    background-color: #54A6FF;
+    background-image: url("../images/left\ car.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.rental-banner-blue {
+    background-color: #3563E9;
+    background-image: url("../images/right\ car.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.rental-banner-left,
+.rental-banner-right {
+    position: relative;
+    z-index: 2;
+    max-width: 284px;
+}
+.hero-banners h1 {
+    font-size: var(--primary-heading-size);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+.hero-banners p {
+    font-size: var(--primary-font-size);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 24px; 
+    margin-top: 0;
+}
+.btn-primary, 
+.btn-secondary {
+    border: none;
+    padding: 10px 20px;
+    font-size: var(--primary-font-size);
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    font-style: semibold;
+    color: white;
+    display: inline-block;
+}
+.btn-primary {
+    background-color: var(--primary-color-500);
+}
+.btn-secondary {
+    background-color: var(--information-color);
+}
+.banner-img {
+    position: absolute;
+    right: 95px;
+    max-width: 400px;
+    z-index: 1;
+}
+.rental-banner-blue .banner-img {
+    bottom: 18px;
+}
+.rental-banner-light-blue .banner-img {
+    bottom: 8px;
+}
