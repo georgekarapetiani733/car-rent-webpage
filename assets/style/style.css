@@ -185,9 +185,11 @@ a {
 }
 .btn-primary {
     background-color: var(--primary-color-500);
+    font-family: inherit;
 }
 .btn-secondary {
     background-color: var(--information-color);
+    font-family: inherit;
 }
 .banner-img {
     position: absolute;
@@ -432,4 +434,28 @@ a {
     color: var(--secondary-color-300);
     text-decoration: line-through;
     margin-top: 4px;
+}
+.recommendation-car-section {
+    margin-top: 32px;
+    margin-bottom: 20px;
+}
+.show-more-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 64px;
+    padding: 0 20px;
+}
+.total-cars {
+    position: absolute;
+    right: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--secondary-color-300);
+}
+.show-more-container .btn-primary {
+    font-weight: 600;
+    padding: 12px 24px;
+    font-family: inherit;
 }
