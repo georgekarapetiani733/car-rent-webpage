@@ -7,6 +7,29 @@
      <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="stylesheet" href="./assets/images/style.css">
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const slider = document.querySelector('.price-slider');
+        const priceValueText = document.querySelector('.price-value');
+
+        if (!slider || !priceValueText) return;
+
+        function updateSlider() {
+            const min = slider.min || 0;
+            const max = slider.max || 150;
+            const value = slider.value;
+            
+            const percentage = ((value - min) / (max - min)) * 100;
+
+            slider.style.setProperty('--value', `${percentage}%`);
+            
+            priceValueText.textContent = `Max. $${value}.00`;
+        }
+        slider.addEventListener('input', updateSlider);
+        updateSlider();
+    });
+</script>
 <body>
     <header>
         <nav class="navigation">
@@ -48,7 +71,67 @@
             </div>
         </nav>
     </header>
-    <main></main>
+    <main class="category-page-layout">
+        <aside class="sidebar">
+            <div class="filter-group">
+                <h4 class="filter-title">TYPE</h4>
+                <div class="checkbox-list">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>Sport<span class="count">(10)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>SUV<span class="count">(12)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>MPV<span class="count">(16)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>Sedan<span class="count">(20)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>Coupe<span class="count">(14)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>Hatchback<span class="count">(14)</span>
+                    </label>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h4 class="filter-title">CAPACITY</h4>
+                <div class="checkbox-list">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>2 Person<span class="count">(10)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>4 Person<span class="count">(14)</span>
+                        </label>
+                        <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>6 Person<span class="count">(12)</span>
+                        </label>
+                        <label class="custom-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>8 or More<span class="count">(16)</span>
+                        </label>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h4 class="filter-title">PRICE</h4>
+                <div class="price-slider-container">
+                    <input type="range" min="0" max="150" value="100" class="price-slider">
+                    <p class="price-value">MAX. $100.00</p>
+                </div>
+            </div>
+        </aside>
+    </main>
     <footer class="footer">
     <div class="footer-top">
         <div class="footer-brand">
