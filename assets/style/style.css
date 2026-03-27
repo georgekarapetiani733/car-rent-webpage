@@ -641,3 +641,67 @@ a {
     font-weight: 600;
     margin: 0;
 }
+.category-page-layout {
+    display: flex;
+}
+
+.category-main-content {
+    flex: 1;
+    padding: 32px; 
+    box-sizing: border-box;
+}
+
+.booking-section-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: relative; 
+    margin-bottom: 32px;
+}
+
+.booking-section-inline .booking-form {
+    width: 48%; 
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.booking-form .radio-section {
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    margin-bottom: 20px;
+}
+
+.booking-form .form-inputs {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking-form .input-group { 
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+    flex: 1;
+}
+
+.booking-form .input-group label { 
+    font-size: 16px; 
+    font-weight: 700; 
+    color: #1A202C;
+}
+.booking-form .divider { 
+    width: 1px; 
+    height: 48px;
+    background-color: #C3D4E9; 
+    margin: 0 15px; 
+}
+.category-main-content .cars-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+.category-main-content .show-more-container {
+    margin-top: 64px;
+    margin-bottom: 20px;
+}
