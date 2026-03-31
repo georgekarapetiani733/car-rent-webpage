@@ -464,7 +464,7 @@ a {
 .footer {
     background-color: var(--secondary-color);
     padding: 80px 0 60px;
-    margin-top: 64px;
+    margin-top: 1px;
 }
 .footer-top {
     display: flex;
@@ -551,7 +551,6 @@ a {
 }
 .sidebar {
     width: 360px;
-    height: 1600px;
     background-color: #FFFFFF;
     padding: 32px;
     box-sizing: border-box;
@@ -710,17 +709,24 @@ a {
     gap: 32px;
     padding: 32px;
     width: 100%;
+    flex-direction: column;
+    flex: 1;
+    box-sizing: border-box;
+    overflow: hidden; 
+
 }
 .detail-top-wrapper {
     display: flex;
     align-items: stretch;
     gap: 32px;
+    width: 100%;
+    flex-direction: row;
 }
 .car-gallery {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    width: 50%;
 }
 .main-promo-card {
     border-radius: 10px;
@@ -731,25 +737,30 @@ a {
     position: relative;
     height: 360px;
     background-image: url("../images/right\ car.svg");
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
-    background-repeat: no-repeat;
-    width: 492px;
+    background-repeat: no-repeat; 
+    width: 548px;
+    padding-top: 37px;
+    padding-bottom: 45px;
+
 }
-.main-promo-card h2 {
+.promo-content h2 {
     font-size: var(--primary-heading-size);
     font-weight: 600;
-    line-height: 150%;
+    line-height: 48px;
     margin-bottom: 16px;
-    max-width: 280px;
+    max-width: 400px;
     color: white;
+    letter-spacing: -0.03rem;
 }
-.main-promo-card p {
+.promo-content p {
     font-size: var(--primary-font-size);
     font-weight: 500;
-    line-height: 140%;
-    max-width: 280px;
+    line-height: 24px;
+    max-width: 285px;
     color: white;
+    letter-spacing: 0.02rem;
 }
 .main-promo-img {
     align-self: center;
@@ -792,7 +803,7 @@ a {
     padding: 8px;
 }
 .car-info-card {
-    flex: 1;
+    width: 50%;
     background-color: #FFFFFF;
     border-radius: 10px;
     padding: 24px;
@@ -854,4 +865,116 @@ a {
     justify-content: space-between;
     align-items: center;
     margin-top: 32px;
+}
+.review-section {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.review-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-header .quantity {
+    background: #3563E9;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.review-item {
+    display: flex;
+    gap: 16px;
+}
+
+.reviewer-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewer-content {
+    flex: 1;
+}
+
+.review-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.reviewer-info h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A202C;
+}
+
+.reviewer-info .role {
+    font-size: 14px;
+    color: #90A3BF;
+}
+
+.review-date-stars {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.review-date-stars .date {
+    font-size: 14px;
+    color: #90A3BF;
+}
+
+.review-text {
+    font-size: 14px;
+    line-height: 200%;
+    color: #596780;
+}
+
+.show-all-btn {
+    align-self: center;
+    background: none;
+    border: none;
+    color: #90A3BF;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+.related-cars-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-top: 16px;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--secondary-color-300);
+}
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
 }
